@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">SportTracker</string>
+    <string name="gps_not_enabled_msg">GPS недоступен. Вы можете пройти в меню настроек и включить GPS.</string>
+</resources>
