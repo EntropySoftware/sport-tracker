@@ -237,7 +237,7 @@ public class GPSTracker extends Service implements LocationListener {
      * Отображает сообщение-тост с текущей локацией
      */
     public void showLocationNotificator() {
-        Toast.makeText(mContext, "Ваше местоположение - \nШирота: " + latitude + "\nДолгота: " + longitude, Toast.LENGTH_LONG).show();
+        Toast.makeText(mContext, "Ваше местоположение - \nШирота: " + getLatitude() + "\nДолгота: " + getLongitude(), Toast.LENGTH_LONG).show();
     }
 
     public void setDoMonitoring(boolean b) {
@@ -248,6 +248,7 @@ public class GPSTracker extends Service implements LocationListener {
     public void onLocationChanged(Location location) {
         if(doMonitoring) {
             this.location = location;
+            showLocationNotificator();
         }
     }
 

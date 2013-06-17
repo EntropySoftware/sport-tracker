@@ -45,6 +45,7 @@ public class StartActivity extends Activity {
     private void showLocation() {
         GPSTracker gps = GPSTracker.get();
         if(gps.canGetLocation()) {
+            gps.getLocation();
             gps.showLocationNotificator();
         } else {
             gps.showSettingsAlert();
